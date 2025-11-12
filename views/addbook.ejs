@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add a Book</title>
+  <style>
+    body { font-family: Arial; background: #fafafa; text-align: center; }
+    form { margin-top: 40px; }
+    input { padding: 8px; margin: 8px; }
+    button { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; }
+  </style>
+</head>
+<body>
+  <h1>Add a New Book</h1>
+  <form action="/books/bookadded" method="POST">
+    <input type="text" name="name" placeholder="Book Name" required>
+    <input type="number" step="0.01" name="price" placeholder="Price (£)" required>
+    <button type="submit">Add Book</button>
+  </form>
+</body>
+</html>

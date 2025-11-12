@@ -1,4 +1,4 @@
-// Import express and ejs
+// Import express and ejs and sql
 var mysql = require('mysql2');
 var express = require ('express')
 var ejs = require('ejs')
@@ -7,6 +7,7 @@ const path = require('path')
 // Create the express application object
 const app = express()
 const port = 8000
+app.use(express.urlencoded({ extended: true }));
 
 // Tell Express that we want to use EJS as the templating engine
 app.set('view engine', 'ejs')

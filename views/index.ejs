@@ -1,13 +1,77 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Welcome to <%=shopData.shopName%></title>
-    <link rel="stylesheet"  type="text/css" href="/main.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to <%= shopData.shopName %></title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f6fff7;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 20px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2em;
+      }
+
+      nav {
+        margin-top: 30px;
+      }
+
+      a {
+        display: inline-block;
+        margin: 10px 15px;
+        padding: 12px 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+      }
+
+      a:hover {
+        background-color: #45a049;
+      }
+
+      footer {
+        margin-top: 50px;
+        color: #555;
+        font-size: 0.9em;
+      }
+    </style>
   </head>
+
   <body>
-    <h1>Welcome to <%=shopData.shopName%></h1>
-    <p><a href="about">About <%=shopData.shopName%></a></p>
-    <p><a href="books/search">Search for books</a></p>
-    <p><a href="users/register">Register with us</a></p>
+    <header>
+      <h1>📚 Welcome to <%= shopData.shopName %></h1>
+    </header>
+
+    <nav>
+      <a href="/about">About</a>
+      <a href="/books/list">View Books</a>
+      <a href="/books/addbook">Add a Book</a>
+      <a href="/books/search">Search Books</a>
+      <a href="/users/register">Register</a>
+      <a href="/books/bargainbooks">Bargain Books</a>
+    </nav>
+
+    <footer>
+      <p>&copy; <%= new Date().getFullYear() %> <%= shopData.shopName %>. All rights reserved.</p>
+    </footer>
   </body>
 </html>
